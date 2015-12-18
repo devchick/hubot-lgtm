@@ -44,7 +44,7 @@ module.exports = (robot) ->
     bombN = res.match[3]
     count = unless bomb? then 1 else if bombN? then parseInt(bombN, 10) else 5
 
-    lgtmN count
+    lgtmN(count)
     .then (urls) ->
       res.send.apply res, urls
     .catch (e) ->
